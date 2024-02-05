@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Composition</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2 style="text-align: center">New Email</h2>
+      <form id="emailForm">
+        <div class="form-group">
+          <label for="receiverEmail">To:</label>
+          <input type="email" id="receiverEmail" required />
+          <div class="error" id="receiverEmailError"></div>
+        </div>
+        <div class="form-group">
+          <label for="cc">CC:</label>
+          <input type="text" id="cc" />
+          <div class="error" id="ccError"></div>
+        </div>
+        <div class="form-group">
+          <label for="bcc">BCC:</label>
+          <input type="text" id="bcc" />
+          <div class="error" id="bccError"></div>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" required />
+          <div class="error" id="subjectError"></div>
+        </div>
+        <div class="form-group">
+          <label for="priority">Priority:</label>
+          <select id="priority">
+            <option value="normal">Normal</option>
+            <option value="high">High</option>
+            <option value="low">Low</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" required></textarea>
+          <div class="error" id="messageError"></div>
+          <div class="styles">
+
+              <span class="bolt">B</span>
+              <span class="sizeinc">T+</span>
+              <span class="sizedec">T-</span>
+              <span class="italic"
+              ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 256 256"
+              >
+              <path
+              fill="currentColor"
+              d="M204 56a12 12 0 0 1-12 12h-31.35l-40 120H144a12 12 0 0 1 0 24H64a12 12 0 0 1 0-24h31.35l40-120H112a12 12 0 0 1 0-24h80a12 12 0 0 1 12 12"
+              /></svg></span>
+              <span class="underline">U</span>
+              <input type="color" class="color"/>
+            </div>
+            </div>
+            <div>
+
+                <button type="submit" id="sendBtn">Send</button>
+                <input type="file" class="file">
+
+            </div>
+      </form>
+
+      
+    </div>
+    <div class="toast">
+        <span class="info">Succssfully sent</span>
+        <span class="borderline"></span>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
